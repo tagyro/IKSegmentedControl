@@ -42,7 +42,7 @@
         if (i == segmentedControl.selectedSegmentIndex && !separateSelectedItem) {
             continue;
         }
-        CGRect segmentFrame = [[segmentedControl.segments objectAtIndex:i] frame];
+        CGRect segmentFrame = [(segmentedControl.segments)[i] frame];
         if ([separator isKindOfClass:[UIColor class]]) {
             [separator setStroke];
             CGContextSetLineWidth(context, 1.0f);

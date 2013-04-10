@@ -160,7 +160,7 @@ static void SetSegmentBackground(IKSegment *segment, id background) {
         }
         ++index;
     }
-    [[segments objectAtIndex:0] setSegmentPosition:IKSegmentPositionLeft];
+    [segments[0] setSegmentPosition:IKSegmentPositionLeft];
     [[segments lastObject] setSegmentPosition:IKSegmentPositionRight];
 }
 
@@ -186,35 +186,35 @@ static void SetSegmentBackground(IKSegment *segment, id background) {
 
 
 - (void)setWidth:(CGFloat)width forSegmentAtIndex:(NSUInteger)segment {
-    [[segments objectAtIndex:segment] setWidth:width];
+    [segments[segment] setWidth:width];
 }
 
 
 - (CGFloat)widthForSegmentAtIndex:(NSUInteger)segment {
-    return [[segments objectAtIndex:segment] width];
+    return [segments[segment] width];
 }
 
 
 - (void)setTitle:(NSString *)title forSegmentAtIndex:(NSUInteger)segment {
-    id view = [[segments objectAtIndex:segment] contentView];
+    id view = [segments[segment] contentView];
     [view setTitle:title];
 }
 
 
 - (NSString *)titleForSegmentAtIndex:(NSUInteger)segment {
-    id view = [[segments objectAtIndex:segment] contentView];
+    id view = [segments[segment] contentView];
     return [view title];
 }
 
 
 - (void)setImage:(UIImage *)image forSegmentAtIndex:(NSUInteger)segment {
-    id view = [[segments objectAtIndex:segment] contentView];
+    id view = [segments[segment] contentView];
     [view setImage:image];
 }
 
 
 - (UIImage *)imageForSegmentAtIndex:(NSUInteger)segment {
-    id view = [[segments objectAtIndex:segment] contentView];
+    id view = [segments[segment] contentView];
     return [view image];
 }
 
